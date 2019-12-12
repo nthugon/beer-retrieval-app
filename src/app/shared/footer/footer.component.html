@@ -1,9 +1,24 @@
-<p>
-  footer works!
-</p>
-<nav>
-  <ol>
-    <li><a routerLink="/home">Home</a></li>
-    <li><a routerLink="/beers">Beers</a></li>
-  </ol>    
-</nav>
+<footer>
+  <nav class="tabs">
+      <div class="nav-link" routerLink="/home">
+          <i class="fa fa-cog"></i>
+          <li><span>ADMIN PAGE</span></li>
+      </div>
+      <div class="nav-link" routerLink="/home">
+          <i class="fa fa-thumbs-up"></i>
+          <li><span>MY REVIEWS</span></li>
+      </div>
+      <div class="nav-link" routerLink="/beers">
+          <i class="fa fa-beer"></i>
+          <li><span>BEERS</span></li>
+      </div>
+      <div class="nav-link" routerLink="/home">
+          <i class="fa fa-sign-out"></i>
+          <li><span>LOG OUT</span></li>
+      </div>
+      <div class="nav-link" routerLink="/home">
+          <i class="fa fa-sign-in"></i>
+          <li><span>LOG IN</span></li>
+      </div>
+  </nav>
+</footer>

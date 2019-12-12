@@ -1,9 +1,24 @@
-<p>
-  beers works!
-</p>
-<ul>
-  <li *ngFor="let beer of beers; let i = index">
-    {{i+1}} {{beer.name}}
-  </li>
-</ul>
+<div class="sub-heading">
+  <h2>Beers!</h2>
+  <div class="bottle-btn">
+    <button><span>Add a Beer</span></button>
+    <div></div>
+  </div>
+</div>
+
+<section class="content">
+  <h3>Select a Beer to See Reviews</h3>
+  <div class="beer-listing" *ngFor="let beer of beers; let i = index">
+    <div title="{{beer.brewery}}" class="detail-line">
+      {{beer.brewery}}
+    </div>
+    <div title="{{beer.name}}" class="title-line">
+      {{beer.name}}
+    </div>
+    <div class="detail-line">
+      {{beer.style}} {{beer.abv}}<span>{{beer.abv ? "% abv" : ""}}</span>
+    </div>
+  </div>
+</section>
+
 
