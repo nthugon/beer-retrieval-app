@@ -9,6 +9,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { BeersComponent } from './components/beers/beers.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
+import { BeerComponent } from './components/beer/beer.component';
+import { LoaderComponent } from './shared/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { NotFoundComponent } from './shared/not-found/not-found.component';
     FooterComponent,
     HomeComponent,
     BeersComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    BeerComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,

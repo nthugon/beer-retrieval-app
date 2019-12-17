@@ -1,0 +1,28 @@
+<div class="sub-heading">
+  <h2>Reviews!</h2>
+  <div routerLink="/beers" class="bottle-btn">
+    <button><span>Back to Beers</span></button>
+    <div></div>
+  </div>
+</div>
+
+<section class="content">
+  <app-loader *ngIf="!beer"></app-loader>
+  <div *ngIf="beer">
+    <i class="fa fa-times fa-2x" aria-hidden="true" routerLink="/beers"></i>
+    <div class="review-heading">
+      <h2 title="{{beer.brewery}}">{{beer.brewery}}</h2>
+      <h3 title="{{beer.name}}">{{beer.name}}</h3>
+      <p>{{beer.reviews.length > 0 ? "has the following reviews:" : "does not yet have any reviews."}}</p>
+    </div>
+    <div class="review-listing" *ngFor="let review of beer.reviews; let i = index">
+      <div class="comment">
+        "{{review.comments.length > 0 ? review.comments : "No comment."}}" -{{review.reviewer}}
+      </div>
+      <div class="detail-line capitalize">
+        Drink Again?: {{review.drinkAgain}}
+      </div>
+    </div>
+    <button routerLink="/beers">Back to Beers</button>
+  </div>
+</section>

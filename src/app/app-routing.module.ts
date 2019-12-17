@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { BeersComponent } from './components/beers/beers.component';
+import { BeerComponent } from './components/beer/beer.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
 
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'beers', component: BeersComponent },
+  { path: 'beer/:id', component: BeerComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent }
 ];

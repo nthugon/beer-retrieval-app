@@ -41,5 +41,8 @@ footer {
               cursor: pointer;
           }
       }
+      .nav-link:focus {
+          outline: none;
+      }
   }
 }

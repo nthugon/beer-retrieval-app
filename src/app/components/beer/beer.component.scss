@@ -1,0 +1,44 @@
+@import 'mixins';
+@import 'variables';
+
+.sub-heading {
+  @include sub-heading();
+  .bottle-btn {
+    @include bottle-btn();
+  }
+}
+.content {
+  @include content-area();
+  text-align: center;
+  i {
+    @include close-x();          
+  }
+  .review-heading {
+    margin: 0 0 5%;
+    h2 {
+      @include content-heading();
+    }
+    h3 {
+      @include content-sub-heading();
+    }
+    p {
+      margin: 1% 0 0 0;
+      color: $black;           
+      font-size: 1.4rem;
+    }
+  }
+  .review-listing {
+    @include listing();
+  }
+  button {
+    @include button();
+    margin: 0 2% 5%;
+    background-color: $content-text;
+  }
+
+  @media (min-width: 768px) {
+    .review-listing {
+      width: 50%;
+    }
+  }
+}

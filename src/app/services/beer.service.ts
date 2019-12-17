@@ -14,4 +14,8 @@ export class BeerService {
     return this.http.get<Beer[]>('https://brj-server.herokuapp.com/api/beers');
   }
 
+  get(id: string): Observable<Beer> {
+    return this.http.get<Beer>(`https://brj-server.herokuapp.com/api/beers/${id}`);
+  }
+
 }

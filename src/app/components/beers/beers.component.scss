@@ -3,7 +3,7 @@
 .sub-heading {
   @include sub-heading();
   .bottle-btn {
-      @include bottle-btn();
+    @include bottle-btn();
   }
 }
 .content {
@@ -11,17 +11,17 @@
   box-sizing: border-box;
   color: $black;
   .beer-listing{
-      @include listing();
-      cursor: pointer;
+    @include listing();
+    cursor: pointer;
   }
   h3 {
-      @include content-heading();
+    @include content-heading();
   }
 
   @media (min-width: 768px)
   {
-      .beer-listing {
-          width: 50%;
-      }
+    .beer-listing {
+      width: 50%;
+    }
   }
 }

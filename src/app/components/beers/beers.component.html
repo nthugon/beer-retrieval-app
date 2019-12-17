@@ -7,16 +7,19 @@
 </div>
 
 <section class="content">
-  <h3 *ngIf="beers">Select a Beer to See Reviews</h3>
-  <div class="beer-listing" *ngFor="let beer of beers; let i = index">
-    <div title="{{beer.brewery}}" class="detail-line">
-      {{beer.brewery}}
-    </div>
-    <div title="{{beer.name}}" class="title-line">
-      {{beer.name}}
-    </div>
-    <div class="detail-line">
-      {{beer.style}} {{beer.abv}}<span>{{beer.abv ? "% abv" : ""}}</span>
+  <app-loader *ngIf="!beers"></app-loader>
+  <div *ngIf="beers">
+    <h3 >Select a Beer to See Reviews</h3>
+    <div class="beer-listing" [routerLink]="['/beer', beer._id]" *ngFor="let beer of beers; let i = index">
+      <div title="{{beer.brewery}}" class="detail-line">
+        {{beer.brewery}}
+      </div>
+      <div title="{{beer.name}}" class="title-line">
+        {{beer.name}}
+      </div>
+      <div class="detail-line">
+        {{beer.style}} {{beer.abv}}<span>{{beer.abv ? "% abv" : ""}}</span>
+      </div>
     </div>
   </div>
 </section>
