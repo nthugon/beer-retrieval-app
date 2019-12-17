@@ -7,7 +7,7 @@
 </div>
 
 <section class="content">
-  <h3>Select a Beer to See Reviews</h3>
+  <h3 *ngIf="beers">Select a Beer to See Reviews</h3>
   <div class="beer-listing" *ngFor="let beer of beers; let i = index">
     <div title="{{beer.brewery}}" class="detail-line">
       {{beer.brewery}}
