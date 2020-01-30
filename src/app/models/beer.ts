@@ -1,3 +1,5 @@
+import { Review } from '@app/models/review';
+
 export interface Beer {
   _id?: string;
   abv: number;
@@ -6,4 +8,5 @@ export interface Beer {
   name: string;
   style: string;
   userId: string;
+  reviews: Review[];
 }
