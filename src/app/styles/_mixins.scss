@@ -102,6 +102,7 @@
 
 @mixin listing() {
   text-align: center;
+  outline: none;
   color: $content-text;
   width: 80%;
   margin: 3% auto;
